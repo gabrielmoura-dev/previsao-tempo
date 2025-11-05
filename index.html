@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quadra de Temperatura</title>
+  <style>
+    body {
+      background-color: white;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column; /* 🔹 Agora o título fica em cima e as temperaturas embaixo */
+      align-items: center;
+      width: 100%;
+    }
+
+    .previsao {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: #1E88A8;
+      width: 100%;
+      height: 60px;
+      border-bottom: 4px solid #E0C000;
+      color: white;
+    }
+
+    .previsao img {
+      height: 40px;
+    }
+
+    .temperaturas {
+      display: flex;
+      justify-content: space-around; /* 🔹 Distribui as caixas igualmente */
+      width: 100%;
+      padding: 10px;
+      background-color: #F4F8FB;
+    }
+
+    .temperatura {
+      background-color: white;
+      border-radius: 8px;
+      width: 20%;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      color: #333;
+    }
+
+    .temperatura p {
+      margin: 10px 0;
+    }
+
+    .horario {
+      color: gray;
+      font-weight: lighter;
+    }
+
+    .temperatura img {
+      height: 50px;
+    }
+
+    .graus {
+      font-size: 24px;
+      color: #F28C2A;
+      font-weight: bold;
+    }
+
+    /* FIM DO LADO SUPERIOR */
+
+    .borda-azul {
+      background-color: #1E88A8;
+      border: solid #1E88A8 0.1em;
+      width: 100%;
+    }
+
+    .semana {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      padding: 10px;
+      background-color: #F4F8FB;
+    }
+
+    .dias-semana {
+      background-color: white;
+      border-radius: 8px;
+      width: 20%;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      color: #333;
+    }
+
+    .dias-semana p {
+      margin: 10px 0;
+    }
+
+    .dia-nome {
+      color: gray;
+      font-weight: lighter;
+    }
+
+    .data {
+      font-size: 12px;
+    }
+
+    .temp-max {
+      font-size: 36px;
+      color: #F28C2A;
+      font-weight: bold;
+    }
+
+    #min-especial1 {
+      color: rgb(23, 228, 23);
+    }
+
+    #min-especial2 {
+      color: rgb(23, 228, 23);
+    }
+
+    .temp-min {
+      font-size: 18px;
+      color: #F28C2A;
+      font-weight: bold;
+    }
+
+    .dias-semana img {
+      height: 50px;
+      margin: 5px 0;
+    }
+
+    .cabeca-dia {
+      background-color: #1E88A8;
+      color: white;
+    }
+
+    .amanha-shadow {
+      box-shadow: 0 1px 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="previsao">
+      <img src="./fotos/nublado.png" alt="nublado">
+      <p>Previsão do Tempo</p>
+    </div>
+
+    <div class="temperaturas">
+      <div class="temperatura">
+        <p class="horario">manhã</p>
+        <p class="graus">17°</p>
+        <img src="./fotos/chuva.png" alt="chuva">
+        <p>💧 60%</p>
+      </div>
+
+      <div class="temperatura">
+        <p class="horario">tarde</p>
+        <p class="graus">18°</p>
+        <img src="./fotos/chuva.png" alt="chuva">
+        <p>💧 70%</p>
+      </div>
+
+      <div class="temperatura">
+        <p class="horario">noite</p>
+        <p class="graus">16°</p>
+        <img src="./fotos/chuva+fraca.png" alt="chuva fraca">
+        <p>💧 60%</p>
+      </div>
+
+      <div class="temperatura">
+        <p class="horario">madrugada</p>
+        <p class="graus">16°</p>
+        <img src="./fotos/chuva.png" alt="chuva">
+        <p>💧 70%</p>
+      </div>
+    </div>
+
+    <div class="borda-azul">
+    </div>
+
+    <div class="semana">
+      <div class="dias-semana">
+        <div class="amanha-shadow">
+          <div class="cabeca-dia">
+            <p class="amanha">amanhã</p>
+            <p class="data">19/06</p>
+          </div> 
+         <p class="temp-max">18°</p>
+         <p class="temp-min">16°</p>
+         <img src="./fotos/chuva.png" alt="chuva">
+         <p>☀️ 0h</p>
+         <p>💧 70%</p>
+        </div>
+      </div>
+
+      <div class="dias-semana">
+        <p class="dia-nome">sexta-feira</p>
+        <p class="data">20/06</p>
+        <p class="temp-max">19°</p>
+        <p class="temp-min">16°</p>
+        <img src="./fotos/chuva.png" alt="chuva">
+        <p>☀️ 0h</p>
+        <p>💧 70%</p>
+      </div>
+
+      <div class="dias-semana">
+        <p class="dia-nome">sábado</p>
+        <p class="data">21/06</p>
+        <p class="temp-max">17°</p>
+        <p class="temp-min" id="min-especial1">10°</p>
+        <img src="./fotos/nublado.png" alt="sol com nuvens">
+        <p>☀️ 5h</p>
+        <p>💧 20%</p>
+       </div> 
+
+      <div class="dias-semana">
+        <p class="dia-nome">domingo</p>
+        <p class="data">22/06</p>
+        <p class="temp-max">19°</p>
+        <p class="temp-min" id="min-especial2">7°</p>
+        <img src="./fotos/sol+nublado.png" alt="sol com nuvens">
+        <p>☀️ 3h</p>
+        <p>💧 20%</p>
+    </div>
+  </div>
+</body>
+</html>
